@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <label for="">Input Nilai</label>
+        <select id="nilai" style="width: 10rem;">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+        </select>
+        <button type="submit" onclick="hasil()" style="width: 5rem; background-color: tomato; color: white;">Klik</button>
+    </div>
+    <script>
+        function hasil(){
+            var nilai = document.getElementById('nilai').value
+        switch(nilai){
+            case "A":
+                alert('Bagus')
+                break
+            case "B":
+                alert('lumayan')
+                break
+            case "C":
+                alert('Cukup')
+                break
+            case "D":
+                alert('Jelek amat si')
+                break
+            default:
+            alert('tidak ada input')
+        }
+        }
+    </script>
+</body>
+</html>

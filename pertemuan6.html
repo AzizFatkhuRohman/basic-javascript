@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="barang">Pilih barang</label>
+        <select name="barang" id="barang">
+            <option value="Buku">Buku</option>
+            <option value="Pensil">Pensil</option>
+        </select>
+    </div>
+    <div>
+        <label for="harga">Harga</label>
+        <input type="number" name="harga" id="harga">
+    </div>
+    <div>
+        <label for="jumlah">Jumlah</label>
+        <input type="number" name="jumlah" id="jumlah">
+    </div>
+    <input type="submit" value="Submit" onclick="hitung()">
+    <script>
+        function hitung(){
+            let harga = document.getElementById('harga').value
+            let jumlah = document.getElementById('jumlah').value
+            let namaBarang = document.getElementById('barang').value
+            if (jumlah > 10) {
+                let diskon = 5
+                let total = parseInt(harga)* parseInt(jumlah)
+                let totalDiskon = parseInt(total)-parseInt(diskon)
+                alert(totalDiskon+ " " + namaBarang)
+            } else {
+                let total = parseInt(harga)* parseInt(jumlah)
+                alert(total+ " " +namaBarang)
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Operator</h1>
+    <style>
+        .container{
+            justify-content: center;
+            align-items: center;
+            margin: 2rem;
+            background-color: whitesmoke;
+        }
+        input{
+            margin-bottom: 3px;
+            width: 90%;
+        }
+        select{
+            margin-bottom: 3px;
+            width: 90%;
+        }
+        button{
+            background-color: blue;
+            color: white;
+            border: none;
+            width: 10rem;
+        }
+    </style>
+    <div class="container">
+        <div>
+            <label for="">Opsi Opt</label>
+            <select id="input0">
+                <option value="Tambah">Tambah</option>
+                <option value="Kurang">Kurang</option>
+                <option value="Bagi">Bagi</option>
+                <option value="Kali">Kali</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Variabel 1</label>
+            <input type="number" id="input1">
+        </div>
+        <div>
+            <label for="">Variabel 2</label>
+            <input type="number" id="input2">
+        </div>
+        <div>
+            <button type="submit" onclick="kalkulasi()">Submit</button>
+        </div>
+    </div>
+    <script>
+        function kalkulasi(){
+            var input = document.getElementById('input0').value
+            var a = document.getElementById('input1').value
+            var b = document.getElementById('input2').value
+            if (input == 'Tambah') {
+                var hasil = parseInt(a)+ parseInt(b);
+            }else if(input == 'Kurang') {
+                var hasil = parseInt(a-b)
+            }else if(input == 'Bagi') {
+                var hasil = parseInt(a/b)
+            }else if(input == 'Kali') {
+                var hasil = parseInt(a*b)
+            }
+            alert(hasil)
+            console.log(hasil)
+        }
+    </script>
+</body>
+</html>
