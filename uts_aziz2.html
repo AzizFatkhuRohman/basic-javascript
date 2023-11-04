@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aziz Fatkhu Rohman</title>
+</head>
+<body>
+    <button id="kalkulasi">Hitung</button>
+
+  <script>
+    document.querySelector('#kalkulasi').addEventListener('click', function () {
+      var bilangan1 = parseFloat(window.prompt('Masukkan bilangan pertama:'));
+      var operator = window.prompt('Masukkan operator (+, -, *, /):');
+      var bilangan2 = parseFloat(window.prompt('Masukkan bilangan kedua:'));
+
+      if (isNaN(bilangan1) || isNaN(bilangan2)) {
+        window.alert('Masukkan bilangan yang valid.');
+      } else {
+        var hasil;
+
+        if (operator === '+') {
+          hasil = bilangan1 + bilangan2;
+        } else if (operator === '-') {
+          hasil = bilangan1 - bilangan2;
+        } else if (operator === '*') {
+          hasil = bilangan1 * bilangan2;
+        } else if (operator === '/') {
+          if (bilangan2 !== 0) {
+            hasil = bilangan1 / bilangan2;
+          } else {
+            window.alert('Tidak bisa membagi dengan 0.');
+            return;
+          }
+        } else {
+          window.alert('Operator tidak valid.');
+          return;
+        }
+
+        window.alert('Hasil: ' + hasil);
+      }
+    });
+  </script>
+</body>
+</html>
